@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget
+        id="com.edjufun.bizmanager"
+        version="1.0.12"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Unscramble</name>
+    <description>
+        A business expense manager
+    </description>
+    <author email="tolulopeibiyode@gmail.com" href="#">
+        Gods1son
+    </author>
+    <content src="index.html" />
+	
+    <preference name="phonegap-version" value="cli-8.1.1" />
+    <preference name='pgb-builder-version' value='2' />
+    <preference name="android-minSdkVersion" value="19"/>
+    <preference name="android-targetSdkVersion" value="28" /> 
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="orientation" value="portrait" />
+    <icon height="48" src="android-icon-48x482.png" width="48"/>
+    <icon height="48" platform="android" src="android-icon-48x482.png" width="48"/>
+    <!--<icon height="48" platform="ios" src="android-icon-48x482.png" width="48"/>-->
+    <icon height="48" platform="windows" src="android-icon-48x482.png" width="48"/>
+    <plugin name="cordova-plugin-dialogs" source="npm"/>
+	<plugin name="cordova-plugin-local-notification" source="npm"/>
+	<plugin name="cordova-plugin-x-socialsharing" source="npm" spec="5.4.7"/>
+    <plugin name="cordova-plugin-whitelist" source="npm"/>  
+    
+</widget>
