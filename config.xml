@@ -30,5 +30,6 @@
 	<plugin name="cordova-plugin-x-socialsharing" source="npm" spec="5.4.7"/>
     <plugin name="cordova-plugin-whitelist" source="npm"/>  
     <plugin name="cordova-pdf-generator" source="npm"/> 
-    <plugin name="cordova-plugin-sqlite-2" source="npm"/>  
+    <plugin name="cordova-plugin-sqlite-2" source="npm"/> 
+    <plugin name="cordova-plugin-file-transfer" source="npm"/> 
 </widget>
