@@ -13,7 +13,7 @@
     </author>
     <content src="index.html" />
 	
-    <preference name="phonegap-version" value="cli-8.1.1" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
     <preference name='pgb-builder-version' value='2' />
     <preference name="android-minSdkVersion" value="19"/>
     <preference name="android-targetSdkVersion" value="28" /> 
@@ -32,4 +32,10 @@
     <plugin name="cordova-pdf-generator" source="npm"/> 
     <plugin name="cordova-plugin-sqlite-2" source="npm"/> 
     <plugin name="cordova-plugin-file-transfer" source="npm"/> 
+
+    <allow-navigation href="http://34.106.12.119:5984/*" />
+    <access origin="*" subdomains="true" />
+    <access origin="*"/>
+    <access origin="http://34.106.12.119:5984/*"/>
+    <allow-intent href="http://34.106.12.119:5984/*"/>
 </widget>
