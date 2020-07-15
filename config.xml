@@ -4,7 +4,7 @@
         version="1.0.21"
         xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>BizExpenseManager</name>
+    <name>Biz Track</name>
     <description>
         A business expense manager
     </description>
