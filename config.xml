@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget
-        id="com.edjufun.bizmanager"
+        id="com.edjufun.mogulsheet"
         version="1.0.21"
         xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Biz Track</name>
+    <name>Mogul Sheet</name>
     <description>
-        A business expense manager
+        An expense manager for business owners. It's helpful for keeping track of clients information, products, sales, expenses.
     </description>
     <author email="tolulopeibiyode@gmail.com" href="#">
         Gods1son
