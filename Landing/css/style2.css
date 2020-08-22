@@ -1,0 +1,151 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+body{
+    overflow: auto;
+}
+
+.testimonials, .newsletter{
+    display: none;
+}
+
+.section-paragraph{
+    font-size: 1.5em;
+}
+
+.logoHeader{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.launchApp{
+    padding: 5px 30px;
+    background: #673ab7;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.2em;
+    animation: bounce 1s infinite;
+}
+
+.logoParent{
+    height: 44px;
+    display: inline-flex;
+    background: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.hero-title{
+    margin-left:10px;
+    color: #11103E;
+}
+
+.container-fluid{
+    width: 90%;
+    margin:auto;
+}
+
+.site-header{
+    /*background: #673ab7;*/
+    padding: 10px 0 5px 0;
+}
+
+.bannerWrap{
+    text-align: center;
+}
+
+.bannerWrap img{
+    max-width: 65%;
+    margin: auto;
+}
+
+.heroBig{
+    background:#11103E;
+    padding-top: 50px;
+}
+
+.businessTitle h3{
+    color:white;
+}
+
+.section-title{
+    color:#11103E;
+}
+
+.hero-copy{
+    display: flex;
+    align-items: center;
+}
+
+.hero{
+    padding: 25px 0;
+    background: #11103E;
+    color: white;
+}
+
+.heroExplain{
+    font-size: 1.2em;
+}
+
+.heroListed{
+    line-height: 2.5em;
+    list-style: none;
+}
+
+.heroListed .icon{
+    font-size:2em;
+}
+
+.heroListed span{
+    font-size: 1em;
+    margin-left: 5px;
+    vertical-align: bottom;
+}
+
+.questAns{
+    display: none;
+    border: 2px solid #673ab7;
+    border-top: 0;
+    padding: 5px 40px;
+    background: white;
+}
+
+.questTitle{
+    background: #673ab7;
+    color: white;
+    padding: 5px;
+    font-size: 1.1em;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.questTitle .f7-icons{
+    float: left;
+    margin-right: 10px;
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
+	}
+}
+
+@media (min-width: 768px) {
+    .logoParent{
+        height: 74px;
+    }
+}
