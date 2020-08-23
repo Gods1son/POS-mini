@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget
         id="com.edjufun.mogulsheet"
-        version="1.0.40"
+        version="1.0.50"
         xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Mogul Sheet</name>
@@ -30,7 +30,8 @@
 	<plugin name="cordova-plugin-x-socialsharing" source="npm" spec="5.4.7"/>
     <plugin name="cordova-plugin-whitelist" source="npm"/>  
     <plugin name="cordova-pdf-generator" source="npm"/> 
-    <plugin name="cordova-plugin-sqlite-2" source="npm"/> 
+    <!--<plugin name="cordova-plugin-sqlite-2" source="npm"/> -->
+    <plugin name="cordova-plugin-file" source="npm"/> 
     <plugin name="cordova-plugin-file-transfer" source="npm"/> 
 
     <allow-navigation href="*" />
