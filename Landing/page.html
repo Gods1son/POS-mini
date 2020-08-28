@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mogul Sheet</title>
+	<link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700|Fira+Sans:600" rel="stylesheet">
+	<link rel="icon" href="images/favicon.png">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/page.css">
+	
+</head>
+<body>
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+			
+            <div class="margin-horizontal-half">
+                <div class="site-header-inner">
+                        <div class="logoParent">
+							<img src="images/favicon.png" class="logoHeader">
+							<h3 class="hero-title mt-0 mb-0 ml-1">Mogul Sheet</h3>
+						</div>
+						
+                </div>
+            </div>
+        </header>
+
+        <main class="display-flex">
+           
+            <section class="productPage pageWrapper">
+                <div class="loader display-none parentWrapper">
+                    <img src="images/Ring-Loading-1.gif">
+                </div>
+                <div class="myCard display-none no-data parentWrapper">
+                    <div class="text-align-center">No record found</div>
+                </div>
+
+            <div class="display-none productInfo parentWrapper">
+                <div class="myCard">
+                <div class="product_name_parent card-inner display-none">
+                    <div class="pageLabel">Product Name:</div>
+                    <div class="pageLabelCont" id="product_name"></div>
+                </div>
+
+                <div class="product_description_parent card-inner display-none">
+                    <div class="pageLabel">Product Description:</div>
+                    <div class="pageLabelCont" id="product_description"></div>
+                </div>
+
+                <div class="product_selling_price_parent card-inner display-none">
+                    <div class="pageLabel">Product Selling Price:</div>
+                    <div class="pageLabelCont" id="product_selling_price"></div>
+                </div>
+                    
+                <div class="product_notes_parent card-inner display-none">
+                    <div class="pageLabel other_notes">Other Notes:</div>
+                    <div class="pageLabelCont" id="product_notes"></div>
+                </div>
+
+                <div class="my-footer display-none">
+                    <div><b>Contact Information</b></div>
+                    <div class="sellerPhone"></div>
+                    <div class="sellerEmail"></div>
+                </div>
+
+                </div>
+            </div>
+
+            </section>
+
+			
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer-inner has-top-divider">
+				<div class="container">
+                    <div class="text-align-center">
+						<div>
+							<div class="footer-copyright"><span>&copy; <span id="thisYear"></span> <a class="homeLink" href="default.html" target="_blank">Mogul Sheet</a>, all rights reserved</span></div>
+						</div>
+					</div>
+				</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/page.js"></script>
+</body>
+</html>

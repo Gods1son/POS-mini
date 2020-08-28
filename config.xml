@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget
         id="com.edjufun.mogulsheet"
-        version="1.0.50"
+        version="1.0.60"
         xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Mogul Sheet</name>
@@ -37,4 +37,10 @@
     <allow-navigation href="*" />
     <access origin="*"/>
     <allow-intent href="*"/>
+    <platform name="android">
+        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/uses-permission" xmlns:android="http://schemas.android.com/apk/res/android">
+            <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </edit-config>
+    </platform>
 </widget>

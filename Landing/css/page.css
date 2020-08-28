@@ -1,0 +1,56 @@
+.site-header{
+    box-shadow: 0px 0px 4px 0px;
+}
+
+.pageWrapper{
+    margin: 10px auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.productPage .myCard{
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 0;
+    width: 100%;
+}
+
+.productPage .myCard .my-footer{
+    background: #d3d3d36b;
+    text-align: right;
+    padding: 5px 10px;
+    margin-bottom: -10px;
+}
+
+.productPage .myCard .card-inner{
+    padding: 0 10px;
+}
+
+.pageLabel{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.pageLabelCont{
+    margin-left: 10%;
+    font-size: 1.2em;
+}
+
+.loader{
+    margin: auto;
+    width: 100%;
+}
+
+.parentWrapper{
+    width: 100%;
+    margin: auto;
+}
+
+.homeLink{
+    text-decoration: underline !important;
+}
+
+.sellerEmail .valueName, .sellerPhone .valueName{
+    font-weight: 600 !important;
+}

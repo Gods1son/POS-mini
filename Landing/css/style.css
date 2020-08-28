@@ -1705,8 +1705,8 @@ main {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 48px;
-    padding-bottom: 48px
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .site-footer-inner.has-top-divider::before {
