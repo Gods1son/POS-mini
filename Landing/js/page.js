@@ -1,4 +1,4 @@
-var baseUrl = "https://posbackend.herokuapp.com/"; // "http://localhost:3000/"
+var baseUrl = "https://posbackend.herokuapp.com/"; //    "https://mogulend.herokuapp.com/" "http://localhost:3000/"
 $(document).ready(function(){
     var year = new Date().getFullYear();
     $("#thisYear").text(year);
@@ -38,7 +38,11 @@ function getPageContent(){
             }
             if(res.successCode){
                 $(".productInfo").removeClass("display-none");
-                $(".hero-title").html(res.comp_name);
+                if(res.comp_name != ""){
+                    $(".logoHeader").addClass("display-none");
+                    $(".hero-title").html(res.comp_name);
+                }
+                
                 if(res.product_name != ""){
                     $(".product_name_parent").removeClass("display-none");
                     $("#product_name").html(res.product_name);
