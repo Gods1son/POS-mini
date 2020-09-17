@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget
         id="com.edjufun.mogulsheet"
-        version="1.0.90"
+        version="1.1.0"
         xmlns="http://www.w3.org/ns/widgets"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Mogul Sheet</name>
     <description>
@@ -32,7 +33,18 @@
     <plugin name="cordova-pdf-generator" source="npm"/> 
     <!--<plugin name="cordova-plugin-sqlite-2" source="npm"/> -->
     <plugin name="cordova-plugin-file" source="npm"/> 
-    <plugin name="cordova-plugin-file-transfer" source="npm"/> 
+    <plugin name="cordova-plugin-file-transfer" source="npm"/>
+    <plugin name="cordova-plugin-chooser" source="npm"/> 
+
+<platform name="android">
+    <edit-config
+        file="app/src/main/AndroidManifest.xml"
+        mode="merge"
+        target="/manifest/application"
+    >
+        <application android:largeHeap="true" />
+    </edit-config>
+</platform>
 
     <allow-navigation href="*" />
     <access origin="*"/>

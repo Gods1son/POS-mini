@@ -3,9 +3,11 @@ $(document).ready(function(){
     var year = new Date().getFullYear();
     $("#thisYear").text(year);
     getPageContent();
-
+    $(".cross").on("click", function(){
+        $(".bigImage").hide();
+    })
 })
-
+var currentSlide = 0;
 function getPageContent(){
     
     var urlLink = getUrlVars();
@@ -74,6 +76,29 @@ function getPageContent(){
                     $(".sellerEmail").empty();
                     $(".sellerEmail").append(email);
                 }
+
+                if(res.images != undefined){
+                    if(res.images.length < 2){
+                        $(".arrows").addClass("display-none");
+                    }
+                    for(var m = 0; m < res.images.length; m++){
+                        var obj = res.images[m];
+                        var imgName = Object.keys(obj)[0];
+                        var imgSrc = Object.values(obj)[0];
+                        var show = m == 0 ? " active" : "";
+                        var html = "<img class='images" + show + "' src='" + imgSrc + "' data-name='" + imgName + "'>";
+                        $(".imagesColumn").append(html); 
+                    }
+                    $(".swiper-images").removeClass("display-none");
+                    $(document).on("click", ".arrows", function(){
+                        var minus = $(this).hasClass("left") ? -1 : 1;
+                        currentSlide += minus;
+                        currentSlide = currentSlide > $(".imagesColumn .images").length - 1 ? 0 : currentSlide;
+                        currentSlide = currentSlide < 0 ? $(".imagesColumn .images").length - 1 : currentSlide;
+                        $(".imagesColumn .images").removeClass("active");
+                        $(".imagesColumn .images").eq(currentSlide).addClass("active");
+                    })
+                }
             }
         },
         error: function(err){
@@ -96,4 +121,55 @@ function getUrlVars()
         vars[hash[0]] = hash[1];
     }
     return vars;
+}
+
+function uploadImages(){
+        
+        var data = new FormData();
+        for(var i = 0; i < $('#myPhotos')[0].files.length; i++){
+            var files = $('#myPhotos')[0].files[i];
+            data.append("photos", files);
+        }
+        
+        //return;
+
+        $.ajax({
+            url: baseUrl + 'uploadImages',
+            type: 'post',
+            data: data,
+            contentType: false,
+            processData: false,
+            success: function(response){
+                if(response.success){
+                    var keys = Object.keys(response.images);
+                    for(var i = 0; i < keys.length; i++){
+                        console.log(keys[i], response.images[keys[i]]);
+                    }
+                }else{
+                    console.log("failed");
+                }
+            },
+            error: function(err){
+                console.log(err);
+            }
+        });
+}
+
+function checkFiles(el, files) {  
+    var maxLimit = 3;  
+    var id = el.id;
+    let list = new DataTransfer;
+    var cut = 0;
+    for(var i = 0; i < $('#' + id)[0].files.length; i++){
+        var files = $('#' + id)[0].files[i];
+        var size = files.size / 1024 / 1024;
+        if((size <= 2) && (i < maxLimit)){
+            list.items.add(files);
+        }else{
+            cut++;
+        }
+    }  
+    document.getElementById(el.id).files = list.files; 
+    var tense = cut == 1 ? " file was " : " files were "
+    if(cut > 0) alert(cut + tense + "removed because it's too large or you went above file limits");   
 }
